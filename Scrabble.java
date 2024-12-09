@@ -48,8 +48,11 @@ public class Scrabble {
 
 	// Checks if the given word is in the dictionary.
 	public static boolean isWordInDictionary(String word) {
+		if(word.equals("")) return false;
+
 		for (int i = 0; i < DICTIONARY.length; i++) {
-			if(DICTIONARY[i] == word) return true;
+			if(word.equals(DICTIONARY[i])) return true;
+
 		}
 
 		return false;
@@ -149,7 +152,7 @@ public class Scrabble {
 		// testBuildingTheDictionary();  
 		// testScrabbleScore();    
 		////testCreateHands();  
-		////testPlayHands();
+		// testPlayHands();
 		playGame();
 	}
 
@@ -178,6 +181,6 @@ public class Scrabble {
 		init();
 		//playHand("ocostrza");
 		//playHand("arbffip");
-		//playHand("aretiin");
+		playHand("aretiin");
 	}
 }
