@@ -4,13 +4,14 @@
 public class MyString {
     public static void main(String args[]) {
         String hello = "hello";
-        // System.out.println(remove("abc","abc")); // should return true
+        System.out.println(remove("meet","committee")); // should return true
         // System.out.println(subsetOf("spa", "space")); // should return true
         // System.out.println(subsetOf("pass", "space")); // should return false
         // System.out.println(subsetOf("c", "space")); // should return true
         // System.out.println(countChar(hello, 'h'));
         // System.out.println(countChar(hello, 'l'));
         // System.out.println(countChar(hello, 'z'));
+
         // System.out.println(randomStringOfLetters(30));
         //// Put your other tests here.
     }
@@ -70,7 +71,7 @@ public class MyString {
         for (int i = 0; i < str.length(); i++) {
             
             newStr += str.charAt(i);
-            if (i != str.length()) newStr += " "; 
+            if (i < str.length()-1) newStr += " "; 
         }
 
         return newStr;
@@ -110,13 +111,13 @@ public class MyString {
     public static String remove(String str1, String str2) {
         int charAtIndex = 0;
 
-        for (int i = 0; i < str1.length(); i++) {
-            charAtIndex = str2.indexOf(str1.charAt(i));
+        for (int i = 0; i < str2.length(); i++) {
+            charAtIndex = str1.indexOf(str2.charAt(i));
 
-            if(charAtIndex >= 0) str2 = str2.substring(0, charAtIndex) + str2.substring(charAtIndex + 1);
+            if(charAtIndex >= 0) str1 = str1.substring(0, charAtIndex) + str1.substring(charAtIndex + 1);
         }
 
-        return str2;
+        return str1;
     }
 
     /**
