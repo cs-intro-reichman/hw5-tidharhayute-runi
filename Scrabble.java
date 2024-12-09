@@ -113,16 +113,14 @@ public class Scrabble {
 					hand = MyString.remove(hand, input);
 					System.out.println(input + " earned " + wordScore(input) + " points. Score: " + score + " points\n");
 				}
-				else System.out.println("No such word in the dictionary. Try again.");
+
+				else System.out.println("No such word in the dictionary. Try again.\n");
 			} else System.out.println("Invalid word. Try again.");
-			//// Replace the following break statement with code
-			//// that completes the hand playing loop
-			break;
 		}
 		if (hand.length() == 0) {
 	        System.out.println("Ran out of letters. Total score: " + score + " points");
 		} else {
-			System.out.println("End of hand. Total score: " + score + " points");
+			System.out.println("End of hand. Total score: " + score + " points\n");
 		}
 	}
 
